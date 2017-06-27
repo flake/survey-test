@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey App</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#window-close').click(function(){
+        var win = window.open('/thankyou', '_self', '');
+        win.close('/thankyou');
+      });
+    });
+  </script>
+</head>
+<body>
+  <h3>Thank You for taking survey.</h3>
+
+  <div>
+    <a href="javascript:void();" id="window-close">Close Window</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="<%=sourceURL %>">Back to Initial Page</a>
+  </div>
+</body>
+</html>

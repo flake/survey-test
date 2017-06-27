@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey App</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Survey App</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/reports">Reports</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+
+    <div class="row">
+      <h3>Survey Form</h3>
+      <form class="col s12" action="/survey" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="name" id="name" type="text" class="validate" required>
+            <label for="name">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="email" id="email" type="email" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="age" id="age" type="number" class="validate">
+            <label for="age">Age</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="country" id="country" type="text" class="validate">
+            <label for="age">Country</label>
+          </div>
+        </div>
+        <div class="row">
+          <p class="range-field col s6">
+            <label for="experience">Experience Rating</label>
+            <input name="experience" type="range" id="experiencec" min="1" max="5" step="1" value="1" />
+          </p>
+        </div>
+        <div class="row">
+          <p class="col s3">
+            <label>Gender</label>
+            <input name="gender" type="radio" id="male" value="male" />
+            <label for="male">Male</label>
+          </p>
+          <p class="col s3">
+            <input name="gender" type="radio" id="female" value="female" />
+            <label for="female">Female</label>
+          </p>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea name="suggestions" id="suggestions" class="materialize-textarea"></textarea>
+            <label for="suggestions">Suggested Improvements</label>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</body>
+</html>
